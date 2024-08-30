@@ -3,7 +3,7 @@ function validateSyntax() {
     
     let result = ''; 
 
-        if (input.startsWith('pet_') && /^[a-zA-Z0-9_]+$/.test(input)) {
+        if (input.startsWith('pet_') && /^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9]+$/.test(input.slice(4))) {
             result = 'Valid Syntax'
         }
         
